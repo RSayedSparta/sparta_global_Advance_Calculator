@@ -15,7 +15,7 @@ namespace Advance_Calculator
             double pie = Math.PI;
 
             Console.WriteLine("Hello this is a advanced calculator please enter "+ "\n" +
-                "(a) for calculating the area of a shape or (b) for basic mathmatic calculations");
+                "(a) for calculating the area of a shape or (b) for basic mathematic calculations");
 
             option = (Console.ReadLine()).ToLower();
 
@@ -29,28 +29,32 @@ namespace Advance_Calculator
                     switch (area_option.ToLower()) {
                         case "s":
                             Console.WriteLine("Please enter height");
-                            firstNumber = Console.Read();
+                            firstNumber = Convert.ToDouble(Console.ReadLine());
                             Console.WriteLine("Please enter width");
-                            secondNumber = Console.Read();
+                            secondNumber = Convert.ToDouble(Console.ReadLine());
                             ans = firstNumber * secondNumber;
                             Console.WriteLine("The area of your shape is: "+ ans);
+                            Console.Read();
                             break;
                         case "c":
                             Console.WriteLine("Please enter the radius of the circle");
-                            firstNumber = Console.Read();
+                            firstNumber = Convert.ToDouble(Console.ReadLine());
                             ans = pie*(firstNumber * firstNumber);
                             Console.WriteLine("The area of your shape is: " + ans);
+                            Console.Read();
                             break;
                         case "t":
                             Console.WriteLine("Please enter height");
-                            firstNumber = Console.Read();
+                            firstNumber = Convert.ToDouble(Console.ReadLine());
                             Console.WriteLine("Please enter width");
-                            secondNumber = Console.Read();
+                            secondNumber = Convert.ToDouble(Console.ReadLine());
                             ans = (firstNumber * secondNumber) / 2;
                             Console.WriteLine("The area of your shape is: " + ans);
+                            Console.Read();
                             break;
                         default:
                             Console.WriteLine("Enter a valid input");
+                            Console.Read();
                             break;
                     }
                         
@@ -63,42 +67,47 @@ namespace Advance_Calculator
                     {
                         case "+":
                             Console.WriteLine("Please enter first number");
-                            firstNumber = Console.Read();
+                            firstNumber = Convert.ToDouble(Console.ReadLine());
                             Console.WriteLine("Please enter second number");
-                            secondNumber = Console.Read();
+                            secondNumber = Convert.ToDouble(Console.ReadLine());
                             ans = firstNumber + secondNumber;
-                            Console.WriteLine(firstNumber + " " + secondNumber + " = " + ans);
+                            Console.WriteLine(firstNumber + " + " + secondNumber + " = " + ans);
+                            Console.Read();
                             break;
 
                         case "-":
                             Console.WriteLine("Please enter first number");
-                            firstNumber = Console.Read();
+                            firstNumber = Convert.ToDouble(Console.ReadLine());
                             Console.WriteLine("Please enter second number");
-                            secondNumber = Console.Read();
+                            secondNumber = Convert.ToDouble(Console.ReadLine());
                             ans = firstNumber - secondNumber;
-                            Console.WriteLine(firstNumber + " " + secondNumber + " = " + ans);
+                            Console.WriteLine(firstNumber + " - " + secondNumber + " = " + ans);
+                            Console.Read();
                             break;
 
                         case "/":
                             Console.WriteLine("Please enter first number");
-                            firstNumber = Console.Read();
+                            firstNumber = Convert.ToDouble(Console.ReadLine());
                             Console.WriteLine("Please enter second number");
-                            secondNumber = Console.Read();
+                            secondNumber = Convert.ToDouble(Console.ReadLine());
                             ans = firstNumber / secondNumber;
-                            Console.WriteLine(firstNumber + " " + secondNumber + " = " + ans);
+                            Console.WriteLine(firstNumber + " / " + secondNumber + " = " + ans);
+                            Console.Read();
                             break;
 
                         case "*":
                             Console.WriteLine("Please enter first number");
-                            firstNumber = Console.Read();
+                            firstNumber = Convert.ToDouble(Console.ReadLine());
                             Console.WriteLine("Please enter second number");
-                            secondNumber = Console.Read();
+                            secondNumber = Convert.ToDouble(Console.ReadLine());
                             ans = firstNumber * secondNumber;
-                            Console.WriteLine(firstNumber + " " + secondNumber + " = " + ans);
+                            Console.WriteLine(firstNumber + " * " + secondNumber + " = " + ans);
+                            Console.Read();
                             break;
 
                         default:
                             Console.WriteLine("Enter a valid input");
+                            Console.Read();
                             break;
 
                     }
@@ -109,6 +118,7 @@ namespace Advance_Calculator
             else
             {
                 Console.WriteLine("You have selected an invalid input");
+                Console.Read();
             }
 
         }
